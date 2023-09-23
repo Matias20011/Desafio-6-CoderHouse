@@ -1,0 +1,9 @@
+[
+    {"id":1, "title":"Venzo Raptor 29", "description":"MountainBIKE", "price":100000, "thumbnail":"img1.jpg", "code":"abc123", "stock":17},
+    {"id":2, "title":"Casco Shimano", "description":"Casco de ciclismo", "price":20000, "thumbnail":"img2.jpg", "code":"udfi", "stock":25},
+    {"id":3, "title":"Pedales Automaticos Shimano", "description":"Accesorios de Ciclismo", "price":32000, "thumbnail":"img3.jpg", "code":"pjkl", "stock":9},
+    {"id":4, "title": "Cannondale Rodado 29", "description": "MountainBIKE", "price":125000, "thumbnail":"img4.jpg", "code": "sdsa", "stock":12},
+    {"id":5, "title": "Trek Caliber 29", "description": "MountainBIKE", "price": 150000, "thumbnail":"img5.jpg", "code":"ppo2", "stock":8},
+    {"id":6, "title": "Anteojos ciclismo", "description": "Accesorios de Ciclismo", "price":12200, "thumbnail":"img6.jpg", "code": "lll3", "stock":4}
+    
+]
