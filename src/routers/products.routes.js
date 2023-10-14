@@ -1,5 +1,5 @@
 import { Router } from "express";
-import ProductManager from "../controllers/product.controller.js";
+import ProductManager from "../services/db/product.service.js";
 import { getIO } from "../app.js";
 
 const router = Router();
@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
 
 router.get('/:pid', async (req, res) => {
     const { pid } = req.params;
-    const product = await manager.getProductById(parseInt(pid));
+    const product = await manager.getProductById(pid);
     if(product) {
         res.send({status: "success", payload: product });
     } else {
@@ -47,13 +47,13 @@ router.get('/:pid', async (req, res) => {
 router.put('/:pid', async (req, res) => {
     const {pid} = req.params;
     let productToUpdate = req.body;
-    let status = await manager.updateProduct(parseInt(pid), productToUpdate);
+    let status = await manager.updateProduct(pid, productToUpdate);
     res.status(status.code).json({status: status.status});
 })
 
 router.delete('/:pid', async (req, res) => {
   const { pid } = req.params;
-  const status = await manager.deleteProductById(parseInt(pid));
+  const status = await manager.deleteProductById(pid);
   const io = getIO();
   io.emit('deleteProduct', pid);
   res.status(status.code).json({ status: status.status });
